@@ -293,14 +293,14 @@
         pin = dpinEnum[pinstr]
         value = levelEnum[level]
         mod = constructModule(DIGITAL_OUTPUT,"DIGIPORT","Slot1",0,0)
-        mod.pin = pin+2 // +2 be compatable to arduino code
+        mod.pin = pin+2 // +2 to be compatible to Arduino code
         mod.value = [value]
         deviceRun(mod)
     }
     ext.doAWrite = function(pinstr,value){
         pin = dpinEnum[pinstr]
         mod = constructModule(ANALOG_OUTPUT,"DIGIPORT","Slot1",0,value)
-        mod.pin = pin+2 // +2 be compatable to arduino code
+        mod.pin = pin+2 // +2 to be compatible to Arduino code
         mod.value = [value]
         deviceRun(mod)
     }
